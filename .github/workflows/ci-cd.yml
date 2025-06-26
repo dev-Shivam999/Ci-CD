@@ -20,12 +20,12 @@ jobs:
 
     - name: Deploy via SSH
       run: |
-            ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            export NVM_DIR="$HOME/.nvm"
-            source "$NVM_DIR/nvm.sh"
-            cd ~/server/sum-server
-            git pull origin master
-            npm install 
-            node index.js
-            EOF
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+        export NVM_DIR="$HOME/.nvm"
+        source "$NVM_DIR/nvm.sh"
+        cd ~/server/sum-server
+        git pull origin master
+        npm install
+        pm2 restart app || pm2 start ecosystem.config.js
+        EOF
 
