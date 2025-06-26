@@ -23,7 +23,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
           export NVM_DIR="$HOME/.nvm"
           source "$NVM_DIR/nvm.sh"
-          cd ~/server/sum-server
+          cd Ci-CD
           git pull origin master
           npm install
           pm2 reload all || pm2 start index.js --name node
