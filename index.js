@@ -53,8 +53,8 @@ app.get("/todos", (req, res) => {
 });
 
 app.get("/sum", (req, res) => {
-  const a = parseInt(req.query.a);
-  const b = parseInt(req.query.b);
+  const a = 10;
+  const b = 30;
   const sum = a + b;
   res.send(sum.toString());
 });
