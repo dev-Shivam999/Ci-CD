@@ -59,6 +59,11 @@ app.get("/sum", (req, res) => {
   res.send(sum.toString());
 });
 
+app.get("/multiply", (req, res) => {
+  res.json({
+    x:"aaaaa"
+  })
+});
 app.get("/interest", (req, res) => {
   const principal = parseInt(req.query.principal);
   const rate = parseInt(req.query.rate);
