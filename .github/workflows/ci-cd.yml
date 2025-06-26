@@ -23,6 +23,6 @@ jobs:
             ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
             cd ~/server/sum-server
             git pull origin master
-            mkdir ok
+            npm install 
             EOF
 
