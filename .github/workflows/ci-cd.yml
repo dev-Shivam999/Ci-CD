@@ -20,11 +20,9 @@ jobs:
 
     - name: Deploy via SSH
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-          cd server
-          cd sum-server
-          git pull origin master
-          npm install
-          node index.js 
-        EOF
+            ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            cd ~/server/sum-server
+            git pull origin master
+            mkdir ok
+            EOF
 
