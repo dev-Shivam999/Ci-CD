@@ -23,8 +23,8 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
           cd server
           cd sum-server
-          git pull origin main
+          git pull origin master
           npm install
           node index.js 
         EOF
-        
+
