@@ -54,7 +54,7 @@ app.get("/todos", (req, res) => {
 
 app.get("/sum", (req, res) => {
   const a = 10;
-  const b = 30;
+  const b = 3;
   const sum = a + b;
   res.send(sum.toString());
 });
