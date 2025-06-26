@@ -3,7 +3,7 @@ name: Deploy Express.js App
 on:
   push:
     branches:
-      - main  # or your branch
+      - main  
 
 jobs:
   deploy:
@@ -25,5 +25,5 @@ jobs:
           git pull origin main
           cd sum-server
           npm install
-          pm2 restart app || pm2 start index.js --name app
+          node index.js 
         EOF
