@@ -61,7 +61,7 @@ app.get("/sum", (req, res) => {
 
 app.get("/multiply", (req, res) => {
   res.json({
-    x:"xnxxx"
+    x:"xxxx"
   })
 });
 app.get("/interest", (req, res) => {
